@@ -1,0 +1,70 @@
+HTML芝士单
+1<h1></h1>或者<h2></h2>等都是标题标签
+2<br>或者<br />都是换行 为单标签；
+加个：<hr>是水平线，一个是一条
+3文本段落用<p></p>
+4大盒子 一行放一个<div class=""></div>或小盒子 可放多个<span></span>
+5class是命名一个标签，id也是，但好像id只有一个（后续修改吧）
+6<img src="" alt="">图像标签：src里输入图像位置，（“/”表示下一级，“../”表示上一级）
+以上是相对路径，绝对路径直接输入网址。alt表示图片显示不出来时的提示文字，title表示鼠标移到图片上的提示文字；
+7超链接用<a href="" target=""> </a>href里输入网址，target里输入"_blank"表示另开界面打开链接；
+输入"_self"直接替换为目标网址；锚点链接时href中用#名字 来表示 例如<a href="#pink"></a>点击后跳到<h2 id="pink"></h2>
+8 符号&nbsp;表示一个空格，可重复；
+9表格标签必有<table border="">  border表示边框条数 学完css后继续补充
+    一行<tr>  <td>表示一个格子</td>   <th>表示格子中文字要居中</th>   </tr>
+</table>
+合并单元格用到rowspan(hebinlie)或者colspan(合并行)=几，合并几个；
+10列表
+    @1无序  <ul>
+    <li>项1</li>
+    <li>项2</li>
+</ul>
+    @2有序<ol>
+    <li></li>同上
+</ol>
+    @3自定义
+    <dt>
+        <dl>名词1</dl>
+        <dd>名词1的解释1</dd>
+    </dt>
+11表单<form action="url地址 ">
+    <input type="" name="" id="">type类型自己搜下
+</form>
+checked="checked"使此元素首次加载时被选中；maxlength="正整数"规定输入的最大字符量；
+<label></label>网上搜下；
+<select name="" id="">
+    <option value="">选项1</option>
+    <option value="">选项2</option>
+</select>表示下拉选项；
+<textarea name="" id="" cols="30" rows="10"></textarea>学完css后继续补充；
+
+可打开第一次课总结https://www.yuque.com/redrock-fe-2022/dytsbt/hleltq
+
+
+CSS芝士单
+选择器（学习阶段，所以全在head中输入，即内部样式）前提输入<style></style>
+一：基础(常用  width: 实数px;   height: 实数px;   background-color:)
+1标签 选择目标标签 例如：
+<style>
+    p{
+        color: aliceblue;
+    }
+</style>此方法适用于全改
+2类 自定义class名字 名字前加. 例如：
+<style>
+    .panda{
+        color: aliceblue;
+    }
+</style>
+后在<body>
+    <div class="panda">haha</div>
+</body>有对应名字 只要叫此名字的都会变化（涉及class自身属性）
+3id 同上class,但是全要改成id ,并且 变化只对应一个标签（涉及id自身属性）
+4通字符 表示全部选中 例如：
+<style>
+    *{
+        color: aliceblue;
+    }
+</style>
+太累了（其实是自耗造成的）下次有时间再写；
+二：复合
